@@ -1,96 +1,76 @@
-function addNewWEField() {
-    // console.log("Adding New Field");
-    let newNode = document.createElement('textarea');
-    newNode.classList.add('form-control');
-    newNode.classList.add('weField');
-    newNode.classList.add('mt-2');
-    newNode.setAttribute("rows", 3);
-    newNode.setAttribute("placeholder", "Enter here")
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
 
-    let weOb = document.getElementById('we');
-    let weAddButtonOb = document.getElementById('weAddButton');
-    // Refrence Diya kyunki isse Phle agla add krna hai 
-
-    weOb.insertBefore(newNode, weAddButtonOb);
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+    // window.open("index2.html")
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+    // window.open("index2.html")
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
 }
 
-function addNewAQField() {
-    let newNode = document.createElement('textarea');
-    newNode.classList.add('form-control');
-    newNode.classList.add('eqField');
-    newNode.classList.add('mt-2');
-    newNode.setAttribute("rows", 3);
-    newNode.setAttribute("placeholder", "Enter here")
-
-    let aqOb = document.getElementById('aq');
-    let aqAddButtonOb = document.getElementById('aqAddButton');
-    // Refrence Diya kyunki isse Phle agla add krna hai 
-
-    aqOb.insertBefore(newNode, aqAddButtonOb);
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form... :
+  if (currentTab >= x.length) {
+    //...the form gets submitted:
+    document.getElementById("regForm").submit();
+    //HERE TRANFERS
+    window.open("index2.html")
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
 }
 
-//Generate CV(Take Responses and add to Template)
-function generateCV() {
-    // console.log("Shivi is the Best")
-    let nameField = document.getElementById('nameField').value;
-
-    let nameT1 = document.getElementById('nameT1');
-
-    nameT1.innerHTML = nameField;
-
-    document.getElementById('nameT2').innerHTML = nameField;
-
-    document.getElementById('contactT').innerHTML = document.getElementById("contactField").value;
-
-    document.getElementById('addressT').innerHTML = document.getElementById("addressField").value;
-
-    document.getElementById('fbT').innerHTML = document.getElementById("fbField").value;
-
-    document.getElementById('instaT').innerHTML = document.getElementById("instaField").value;
-
-    document.getElementById('linkedT').innerHTML = document.getElementById("linkedInField").value;
-
-    document.getElementById('objectiveT').innerHTML = document.getElementById("objectiveField").value;
-
-    // Work Experience
-    let wes = document.getElementsByClassName('weField');
-    let str = "";
-    for (let e of wes) {
-        str = str + '<li> ${e.value} </li>';
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false:
+      valid = false;
     }
-    document.getElementById('weT').innerHTML = str;
-
-    //Academic qualification
-    let aqs = document.getElementsByClassName('eqField');
-    let str1 = '';
-
-    for (let e of aqs) {
-        str1 += '<li> ${e.value} </li>';
-    }
-    document.getElementById('aqT').innerHTML = str1;
-
-    //code for image
-    let file = document.getElementById('imgField').files[0];
-
-    console.log(file);
-
-    let reader = new FileReader()
-
-    reader.readAsDataURL(file);
-
-    console.log(reader.result);
-
-    // Set Image to Template
-
-    reader.onloadend = function () {
-        document.getElementById('imgTemplate').src = reader.result
-    }
-    // document.getElementById('imgTemplate').src = reader.result;
-    document.getElementById('cv-form').style.display = 'none';
-    document.getElementById('resume-template').style.display = 'block';
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
 }
 
-//Print CV
-function printCV() {
-    window.print()
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class to the current step:
+  x[n].className += " active";
 }
