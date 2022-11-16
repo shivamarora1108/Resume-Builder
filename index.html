@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Resume Generator</title>
+</head>
+
+<body>
+
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class=" text-center"></p>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <!-- first col -->
+                <h3>Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="nameField">Your name</label>
+                    <input type="text" id="nameField" class="form-control" placeholder="Enter Here">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact Number</label>
+                    <input type="text" id="contactField" class="form-control" placeholder="Enter Here">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea id="addressField" class="form-control" placeholder="Enter Here"></textarea>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="">Select Your Photo</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div>
+
+                <p class="text-secondary my-3">Important Links</p>
+
+                <div class="form-group mt-2">
+                    <label for="fbField">Facebook</label>
+                    <input type="text" id="fbField" class="form-control" placeholder="Enter Here">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="linkedInField">Your LinkedIn</label>
+                    <input type="text" id="linkedInField" class="form-control" placeholder="Enter Here">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="instaField">Your Instagram</label>
+                    <input type="text" id="instaField" class="form-control" placeholder="Enter Here">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- second col -->
+                <h3>Professional Information</h3>
+
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" rows="5" class="form-control" placeholder="Enter Here"></textarea>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea rows="3" class="form-control weField" placeholder="Enter Here"></textarea>
+
+                    <!-- New Textarea -->
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualification </label>
+                    <textarea rows="3" class="form-control eqField" placeholder="Enter Here"></textarea>
+
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+    </div>
+
+    <!-- Resume Template -->
+    <div class="container" id="resume-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- First Col -->
+                <img src="./Images/Default Image.jpg" class="img-fluid my-img" alt="" id="imgTemplate">
+
+                <div class="container">
+                    <p id="nameT1">Shivam Arora</p>
+                    <p id="contactT">123456789.987654321</p>
+                    <p id="addressT">New Upkar Nagar, Ludhiana</p>
+
+                    <hr>
+
+                    <p ><a id="fbT" href="https://www.facebook.com/Shivi1108/">Facebook</a></p>
+                    <p><a id="instaT" href="https://www.instagram.com/shivamarora1108/">Instagram</a></p>
+                    <p><a id="linkedT" href="https://www.linkedin.com/in/shivi1108/">LinkedIn</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-8 py-5">
+                <!-- Second Col -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">Shivam Arora</h1>
+
+                <!-- objective card -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa libero ab modi
+                            nihil placeat esse perspiciatis, ipsam, dolorem molestias exercitationem necessitatibus
+                            repellendus, quod enim sint ex dolores tempore tempora perferendis quisquam. Dolor modi,
+                            quod quisquam rerum veniam in ratione ut, aut velit totam iure error quia quasi, laboriosam
+                            cum.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- work experience -->
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit.</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Academic Qualification -->
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, velit.</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background btn-primary btn-lg">
+                        Print CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
