@@ -35,7 +35,7 @@ body{
   
   #cf img {
     float: centre;
-    height:40%;
+    height:65%;
     width:30%;
     position:absolute;
     left:0;
@@ -191,6 +191,16 @@ body{
     .right {
       display: none;
     }
+  }
+
+  .roundborders{
+    /* border-style: double; */
+    border-radius: 35%;
+  }
+  
+  .roundlogin{
+    border-top-left-radius: 6em;
+    border-bottom-right-radius: 6em;
   }
 
 
