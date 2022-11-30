@@ -85,6 +85,14 @@ function generateCV() {
     reader.onloadend = function () {
         document.getElementById('imgTemplate').src = reader.result
     }
+
+    function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+            alert("Name must be filled out");
+            return false;
+        }
+    }
     // document.getElementById('imgTemplate').src = reader.result;
     document.getElementById('cv-form').style.display = 'none';
     document.getElementById('resume-template').style.display = 'block';
