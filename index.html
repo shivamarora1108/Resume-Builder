@@ -1,83 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resume Generator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&family=Varela+Round&display=swap" rel="stylesheet">
-   </head>
-  <body> 
-    <!-- <h1 class="text-center my-2">Resume Generator</h1>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&family=Varela+Round&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- <h1 class="text-center my-2">Resume Generator</h1>
     <p class="text-center">easy way to build your resume</p> -->
-    <nav class="navbar navbar-expand-lg bg-secondary" style="font-family: 'Poppins', sans-serif;
-    font-family: 'Varela Round', sans-serif;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Resume.builder</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Resume
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Cover letter
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-    
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Resume Writing
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg bg-secondary" style="font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif; " id="navbar1">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Resume builder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resume
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Cover letter
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resume Writing
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <h1 class="intro" style="font-family: 'Poppins', sans-serif;
+  <h1 class="intro" style="font-family: 'Poppins', sans-serif;
     font-family: 'Varela Round', sans-serif;"> THE ULTIMATE RESUME BUILDER </h1>
-    <p class="description" >Build beautiful, recruiter-tested resumes in a few clicks!Our resume builder is powerful and easy to use, with a range of amazing functions. Custom-tailor resumes for any job within minutes. Increase your interview chances and rise above the competition. </p>
-    <div id="cf">
-      <img class="bottom" src="temp.png" alt="template"  />
-      <img class="top" src="temp1.webp" alt="template" />
-    </div>
-    <div>
-      <img class="photo" src="image.png" alt="image"/>
-      <img class="photo" src="photo1.png" alt="image"/>
-    </div>
-     
+  <p class="description">Build beautiful, recruiter-tested resumes in a few clicks!Our resume builder is powerful and
+    easy to use, with a range of amazing functions. Custom-tailor resumes for any job within minutes. Increase your
+    interview chances and rise above the competition. </p>
+  <div id="cf">
+    <img class="bottom" src="temp.png" alt="template" />
+    <img class="top" src="temp1.webp" alt="template" />
+  </div>
+  <div>
+    <img class="photo roundborders" src="image.png" alt="image" />
+    <img class="photo roundborders" src="photo1.png" alt="image" />
+  </div>
 
 
 
-    <!-- //taking subscription -->
-    <form id="regForm" action="">
 
-      <h1 style="font-family: 'Poppins', sans-serif;
+  <!-- //taking subscription -->
+  <form id="regForm" class="roundlogin" action="">
+
+    <h1 style="font-family: 'Poppins', sans-serif;
       font-family: 'Varela Round', sans-serif;">Login and build your resume</h1>
+
       
       <!-- One "tab" for each step in the form: -->
       <div class="tab">
@@ -89,15 +97,37 @@
         <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
         <p><input placeholder="Phone..." oninput="this.className = ''"></p>
       </div>
+
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">
+      <p><input placeholder="First name..." oninput="this.className = ''" type="text"></p>
+      <p><input placeholder="Last name..." oninput="this.className = ''" type="text"></p>
+      <a href="index3.html" id="nc" class="text-center">Create New Account</a>
+    </div>
+    <div class="tab">Contact Info:
+      <p><input placeholder="E-mail..." oninput="this.className = ''" type="email"></p>
+      <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+    </div>
+    <div class="tab">Login Info:
+      <p><input placeholder="Username..." oninput="this.className = ''"></p>
+      <p><input placeholder="Password..." oninput="this.className = ''" type="password"></p>
+    </div>
+    <!-- <div class="tab">Birthday:
+        <p><input placeholder="dd" oninput="this.className = ''"></p>
+        <p><input placeholder="mm" oninput="this.className = ''"></p>
+        <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+      </div> -->
+    <!--      
       <div class="tab">Login Info:
         <p><input placeholder="Username..." oninput="this.className = ''"></p>
         <p><input placeholder="Password..." oninput="this.className = ''"></p>
       </div>
+
       <div style="overflow:auto;">
         <div style="float:right;">
           <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
           <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-          <!-- <a href="index2.html"><button type="button">Submit</button> -->
+          <-- <a href="index2.html"><button type="button">Submit</button> -->
          
         </div>
       </div>
@@ -142,65 +172,122 @@ font-family: 'Varela Round', sans-serif;">Our designed templates and examples ar
 <p>4.1 average based on 254 reviews.</p>
 <hr style="border:3px solid #f1f1f1">
 
-<div class="row">
-  <div class="side">
-    <div>5 star</div>
+    <div style="overflow:auto;">
+      <div style="float:right;">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        <!-- <a href="index2.html"><button type="button">Submit</button> -->
+<!-- >>>>>>> 2047d8339f350dd8bfef611cace318c7412ce443 -->
+
+      </div>
+    </div>
+
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+    </div>
+  </form>
+
+  <!-- <h2 style="margin-top: 2%;margin-bottom: 50%;">Create a resume to land your next job</h2> -->
+  <div class="char">
+    <h2 style="font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif; color: black;">About our website</h2>
+    <hr>
+    <br>
+    <h3 style="font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif;color: gray;">Powerful and easy-to-use</h3>
+    <p style="font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif;">Created to be suitable for all levels of job seekers. Our host of powerful
+      features ranges from an excellent spell-checker, to job tracking, multi-format export, auto-generated summaries
+      and more.</p>
+    <h3 style="font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif;color: gray;">Customization made simple</h3>
+    <p style="font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif;">Fine-tune your resume for a specific job with ease. We help you turn a
+      generic document into a cutting-edge instrument that wins interviews. Transform universal resumes into perfect
+      sales pitches with a few key-strokes.</p>
+    <h3 style="font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif;color: gray;">Templates designed by experts</h3>
+    <p style="font-family: 'Poppins', sans-serif;
+font-family: 'Varela Round', sans-serif;">Our designed templates and examples are reviewed by recruiters. This gives
+      you a powerful boost in resume creation, straight from the other side of the job market - the people responsible
+      for hiring and candidate evaluation.</p>
+    <hr>
   </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-5"></div>
+  <!-- reviews -->
+  <span class="heading" style="font-family: 'Poppins', sans-serif;
+      font-family: 'Varela Round', sans-serif;">User Rating</span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <p>4.1 average based on 254 reviews.</p>
+  <hr style="border:3px solid #f1f1f1">
+
+  <div class="row">
+    <div class="side">
+      <div>5 star</div>
+    </div>
+    <div class="middle">
+      <div class="bar-container">
+        <div class="bar-5"></div>
+      </div>
+    </div>
+    <div class="side right">
+      <div>150</div>
+    </div>
+    <div class="side">
+      <div>4 star</div>
+    </div>
+    <div class="middle">
+      <div class="bar-container">
+        <div class="bar-4"></div>
+      </div>
+    </div>
+    <div class="side right">
+      <div>63</div>
+    </div>
+    <div class="side">
+      <div>3 star</div>
+    </div>
+    <div class="middle">
+      <div class="bar-container">
+        <div class="bar-3"></div>
+      </div>
+    </div>
+    <div class="side right">
+      <div>15</div>
+    </div>
+    <div class="side">
+      <div>2 star</div>
+    </div>
+    <div class="middle">
+      <div class="bar-container">
+        <div class="bar-2"></div>
+      </div>
+    </div>
+    <div class="side right">
+      <div>6</div>
+    </div>
+    <div class="side">
+      <div>1 star</div>
+    </div>
+    <div class="middle">
+      <div class="bar-container">
+        <div class="bar-1"></div>
+      </div>
+    </div>
+    <div class="side right">
+      <div>20</div>
     </div>
   </div>
-  <div class="side right">
-    <div>150</div>
-  </div>
-  <div class="side">
-    <div>4 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-4"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>63</div>
-  </div>
-  <div class="side">
-    <div>3 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-3"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>15</div>
-  </div>
-  <div class="side">
-    <div>2 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-2"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>6</div>
-  </div>
-  <div class="side">
-    <div>1 star</div>
-  </div>
-  <div class="middle">
-    <div class="bar-container">
-      <div class="bar-1"></div>
-    </div>
-  </div>
-  <div class="side right">
-    <div>20</div>
-  </div>
-</div>
-      <script src="script.js"></script>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
-</html> 
+  <script src="script.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</html>
