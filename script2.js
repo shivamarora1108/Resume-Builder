@@ -56,7 +56,7 @@ function generateCV() {
     let wes = document.getElementsByClassName('weField');
     let str = "";
     for (let e of wes) {
-        str = str + '<li> ${e.value} </li>';
+        str = str + '<li> ${.value}e </li>';
     }
     document.getElementById('weT').innerHTML = str;
 
